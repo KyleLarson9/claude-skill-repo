@@ -5,8 +5,10 @@ All notable changes to this project are documented here. The format is based on
 
 Plugins are versioned independently; entries below are grouped by plugin.
 
-## read_data
+## Repository
 
-### 0.1.0
+### Unreleased
 
-- Initial scaffold of the `read_data` plugin with a `read_athena` stub skill.
+- Repo foundation: `pyproject.toml` (uv project, `package = false`, ruff + pytest
+  config), `Makefile` (install / lint / format / test / validate), `README.md`,
+  and this changelog.

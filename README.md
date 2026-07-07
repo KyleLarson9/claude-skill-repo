@@ -29,7 +29,7 @@ Add the marketplace, then install a plugin from it:
 
 1. Create `plugins/<name>/` with the plugin's skills and a `.claude-plugin/plugin.json`.
 2. Register it in `.claude-plugin/marketplace.json`.
-3. Run `make lint test validate` and open a PR — CI runs lint + test on every PR to `main`.
+3. Run `make lint test validate` and open a PR (CI lint + test on PRs to `main` is added in a later change).
 
 ## Local development
 
