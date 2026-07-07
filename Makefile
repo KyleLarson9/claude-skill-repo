@@ -20,8 +20,4 @@ test: ## Run the test suite
 	uv run pytest
 
 validate: ## Validate the plugin marketplace
-	@if [ -f .claude-plugin/marketplace.json ]; then \
-		claude plugin validate .; \
-	else \
-		echo "skip validate: .claude-plugin/marketplace.json not present yet"; \
-	fi
+	claude plugin validate .
