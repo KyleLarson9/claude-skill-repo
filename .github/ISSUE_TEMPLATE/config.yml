@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Repository README
+    url: https://github.com/KyleLarson9/claude-skill-repo#readme
+    about: Read the project overview and setup instructions.
