@@ -1,0 +1,24 @@
+name: Custom issue
+description: Anything that does not fit the other templates.
+title: "[Custom]: "
+labels: []
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - skill
+        - plugin
+        - ci-cd
+        - documentation
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Describe the issue.
+    validations:
+      required: true

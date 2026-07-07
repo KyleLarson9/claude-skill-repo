@@ -1,0 +1,31 @@
+name: Skill improvement
+description: Propose an improvement to an existing skill or plugin.
+title: "[Skill]: "
+labels: ["enhancement", "skill"]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - skill
+        - plugin
+        - ci-cd
+        - documentation
+        - other
+    validations:
+      required: true
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill / plugin name
+      description: Which skill or plugin does this affect?
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Proposed improvement
+      description: What should change, and why?
+    validations:
+      required: true
