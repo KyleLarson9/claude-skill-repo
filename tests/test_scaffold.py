@@ -6,6 +6,7 @@ MARKETPLACE = REPO_ROOT / ".claude-plugin" / "marketplace.json"
 
 
 def _load_marketplace():
+    assert MARKETPLACE.is_file(), f"marketplace manifest not found: {MARKETPLACE}"
     return json.loads(MARKETPLACE.read_text(encoding="utf-8"))
 
 
@@ -34,6 +35,7 @@ def test_plugin_name_matches_marketplace_entry():
         plugin_json = (
             REPO_ROOT / plugin["source"] / ".claude-plugin" / "plugin.json"
         ).resolve()
+        assert plugin_json.is_file(), f"missing plugin.json for {plugin['name']}"
         manifest = json.loads(plugin_json.read_text(encoding="utf-8"))
         assert manifest["name"] == plugin["name"]
 
@@ -41,9 +43,9 @@ def test_plugin_name_matches_marketplace_entry():
 def test_each_declared_skills_dir_has_a_skill_md():
     for plugin in _load_marketplace()["plugins"]:
         source = (REPO_ROOT / plugin["source"]).resolve()
-        manifest = json.loads(
-            (source / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8")
-        )
+        plugin_json = source / ".claude-plugin" / "plugin.json"
+        assert plugin_json.is_file(), f"missing plugin.json for {plugin['name']}"
+        manifest = json.loads(plugin_json.read_text(encoding="utf-8"))
         skills_rel = manifest.get("skills")
         if not skills_rel:
             continue
