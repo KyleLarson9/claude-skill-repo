@@ -1,3 +1,4 @@
 .context/
 .nds-adversarial-plan-review/
 .nds-adversarial-review/
+__pycache__/
