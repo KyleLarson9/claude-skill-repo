@@ -1,0 +1,14 @@
+{
+  "name": "larson-claude-plugins",
+  "description": "A Claude Code plugin marketplace for data reading, quality, validation, and verification workflows.",
+  "owner": {
+    "name": "KyleLarson9"
+  },
+  "plugins": [
+    {
+      "name": "read_data",
+      "description": "Skills for reading data from sources like Athena.",
+      "source": "./plugins/read_data"
+    }
+  ]
+}

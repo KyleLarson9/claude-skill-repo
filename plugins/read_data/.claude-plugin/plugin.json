@@ -1,0 +1,12 @@
+{
+  "name": "read_data",
+  "description": "Skills for reading data from sources like Athena.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Kyle Larson"
+  },
+  "homepage": "https://github.com/KyleLarson9/claude-skill-repo",
+  "repository": "https://github.com/KyleLarson9/claude-skill-repo",
+  "license": "MIT",
+  "skills": "./skills/"
+}
